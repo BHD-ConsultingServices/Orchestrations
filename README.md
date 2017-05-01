@@ -1,3 +1,7 @@
+# Architecture Overview #
+
+<img alt="Architecture Overview" src="https://raw.githubusercontent.com/BHD-ConsultingServices/Orchestrations/master/Architecture.png" width="500">
+
 ## What is included? ##
 * __BL Contract Layer__ (Orchestrations)
     * Sample orchestration DTO's, nested for maximum reuse with declaritive structure
