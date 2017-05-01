@@ -11,8 +11,10 @@ namespace Spike.Tests.Test_Data.ObjectMother
         {
             var adapter = new CustomerAdapter();
 
-            JohnDoe = adapter.AddCustomer(new CustomerBuilder().JohnDoe(
-                ObjectMother.Instance.Books.FiveDysfunctions).Build());
+            JohnDoe = adapter.AddCustomer(new CustomerBuilder().JohnDoe(ObjectMother.Instance.Books.FiveDysfunctions).Build());
+
+            adapter.SaveChanges();
+
             JaneDoe = adapter.AddCustomer(new CustomerBuilder().JaneDoe(
                 ObjectMother.Instance.Books.PhoenixProject).Build());
 

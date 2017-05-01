@@ -1,9 +1,7 @@
 ﻿
 namespace Spike.Tests.Test_Data.ObjectMother
 {
-    using System.Collections.Generic;
     using Adapters.LibraryCards;
-    using Contracts.Books;
     using Contracts.LibraryCards;
     using StubData.Builders;
 

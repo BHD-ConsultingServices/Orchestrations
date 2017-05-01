@@ -14,8 +14,10 @@ namespace Spike.Adapters.LibraryCards
     {
         public LibraryCard AddLibraryCard(LibraryCard libraryCard)
         {
-            var result = Context.LibraryCards.Add(libraryCard.Map());
-            return result.Map();
+            // Response from context does not iclude foreign key objects so wont match tests
+            Context.LibraryCards.Add(libraryCard.Map());
+            
+            return libraryCard;
         }
 
         public LibraryCard GetLibraryCard(Guid id)

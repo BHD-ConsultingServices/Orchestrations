@@ -1,22 +1,20 @@
 ﻿
-using System.Collections.Generic;
-using Spike.Contracts.Books;
-
 namespace Spike.StubData.Builders
 {
     using System;
     using Contracts.Customers;
+    using System.Collections.Generic;
+    using Contracts.Books;
 
     public class CustomerBuilder : Customer
     {
         public CustomerBuilder(Guid? id = null)
         {
-            id = id ?? Guid.NewGuid();
+            this.Id = id ?? Guid.NewGuid();
         }
 
         public CustomerBuilder Generate(int seed)
         {
-            this.Id = Guid.NewGuid();
             this.Adress = $"Address [{seed}]";
             this.IdentityNumer = $"81049283746{seed}";
             this.Name = $"Name [{seed}]";
@@ -27,7 +25,6 @@ namespace Spike.StubData.Builders
 
         public CustomerBuilder JohnDoe(Book rentedBook = null)
         {
-            this.Id = Guid.Parse("2FBB092F-9CFB-4BED-81CC-B2EB9DF70E1A");
             this.Name = "John Doe";
             this.Adress = "Tree Street 23, Brooklyn, 0234";
             this.IdentityNumer = "8304057323222";
@@ -45,7 +42,6 @@ namespace Spike.StubData.Builders
 
         public CustomerBuilder JaneDoe(Book rentedBook = null)
         {
-            this.Id = Guid.Parse("AAF94A34-2F2D-4C46-B9D5-3A9439C4F7FE");
             this.Name = "Jane Doe";
             this.Adress = "Red flower 2, NY, 2134";
             this.IdentityNumer = "8103928374633";

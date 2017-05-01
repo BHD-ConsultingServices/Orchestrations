@@ -1,11 +1,12 @@
 ﻿
-namespace Spike.Tests.MockedTests
+namespace Spike.Tests.MockedOchestrationTests
 {
     using System.Linq;
     using Microsoft.VisualStudio.TestTools.UnitTesting;
     using Contracts.Books;
     using StubData.Builders;
     using StubData.Mocking;
+
 
     [TestClass]
     public class OrchestrationTests

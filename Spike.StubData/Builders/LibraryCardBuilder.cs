@@ -11,7 +11,7 @@ namespace Spike.StubData.Builders
     {
         public LibraryCardBuilder(Guid? id = null)
         {
-            id = id ?? Guid.NewGuid();
+            this.Id = id ?? Guid.NewGuid();
         }
 
         public LibraryCardBuilder Generate(int seed)
@@ -27,7 +27,6 @@ namespace Spike.StubData.Builders
 
         public LibraryCardBuilder JohnDoeCard(Customer customer = null)
         {
-            this.Id = Guid.Parse("DEEBFB51-7F4F-4779-AA5F-AA980DC73A64");
             this.Customer = customer ?? new CustomerBuilder().JohnDoe().Build();
 
             return this;
@@ -35,7 +34,6 @@ namespace Spike.StubData.Builders
 
         public LibraryCardBuilder JaneDoeCard(Customer customer = null)
         {
-            this.Id = Guid.Parse("B7CE8BAC-6176-4672-8E46-C0501A50E0B4");
             this.Customer = customer ?? new CustomerBuilder().JaneDoe().Build();
 
             return this;

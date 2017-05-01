@@ -1,11 +1,8 @@
-﻿
-using System.Configuration;
-using System.Security.Authentication;
-
-namespace Spike.Tests.RollbackTests
+﻿namespace Spike.Tests
 {
-    using Microsoft.VisualStudio.TestTools.UnitTesting;
+    using System.Security.Authentication;
     using System.Transactions;
+    using Microsoft.VisualStudio.TestTools.UnitTesting;
     using DataSource;
 
     [TestClass]
