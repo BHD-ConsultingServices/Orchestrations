@@ -6,7 +6,7 @@ A contract layer that expose all the business logic by grouping them by domains.
 
 ## What is included? ##
 * BL Contract Layer (Orchestrations)
-    * Sample orchestration DTO's, nested for maximum reuse and declaritive structure
+    * Sample orchestration DTO's, nested for maximum reuse and declaritive structure
     * Constructor dependency injection (Adapters) for easy DAL configuration and DAL Mocking
     * Automapper DTO's between DAL and orchastraters reducing maintenance effort
     * Orchestration Logic/Worker design to ensure Worker SRP, Logic Readability, low cyclic complexity and worker unit test code isolation
