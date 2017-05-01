@@ -7,13 +7,14 @@
 * __DAL Contract Layer__ (Adapers)
     * Adapers expose DAL logic using Orchestration DTO's so no technology specific dependencies required i.e. ORM entities andinner workings do not bleed into Orchestrations
 
-## Important Constructs to Grasp ##
+## Important Constructs ##
 * __Builders__ - Fluent test data generators, re-usable, readable and adjustable to different scenarios
 * __Query Objects__ - Fluent builders, easy modular design with centralized paging and filter blocks
 * __Mappers__ - Extention methods that maps between Orchestration and Adapter DTO's (Use Automapper for straight forward maps)
 * __Aspect Oriented Programming__ - 
 * __ObjectMother__ - A test data class that reflects the database state with a matching POCO graph
 * __Mocking / Stubbing__ - Replacing actual logic with simple echo back responses to simulate testing against a contract
+* __Waldos__ - Re-usable test data initialization logic. This sets the data in the correct dependant state
 
 * Contract Layers (Using domain specific interfaces easily configurable through DI)
   These contract layers inforces high cohesion loose coupling. Ensuring SOC between tiers and easy mocking/stubbing.
@@ -24,9 +25,9 @@ _A contract layer that expose all the business logic by grouping them by domains
         * External Adapters - Adapters that adapt out to 3rd party systems
 
 * __Testing__
-    * __Integration Tests__ - (Acceptance test cases) High level orchastration tests with a narrow vertical end to end test cases to test how all the different layers fit together
-    * __Mocked Tests__ - (Most BL coverage) Orchastration tests that mocks internal adapters so that only orchatration logic is tested
-    * __Rollback Tests__ - (Health Checks) Adapter tests that runs testing in transaction and rolls it back after assertions
+    * __Integration Orchestration Tests__ - (Acceptance test cases) High level orchastration tests with a narrow vertical end to end test cases to test how all the different layers fit together
+    * __Mocked Orchestration Tests__ - (Most BL coverage) Orchastration tests that mocks internal adapters so that only orchatration logic is tested
+    * __Rollback Adapter Tests__ - (Health Checks) Adapter tests that runs testing in transaction and rolls it back after assertions
     * __Test Data__ - (Local testing & CI) Using the Object Mother the test database can be cleared and populated
 
 ## Adventagous ##
