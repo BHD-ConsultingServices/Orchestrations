@@ -34,9 +34,9 @@ _A contract layer that expose all the business logic by grouping them by domains
     * __Rollback Adapter Tests__ - (Health Checks) Adapter tests that runs testing in transaction and rolls it back after assertions
     * __Test Data__ - (Local testing & CI) Using the Object Mother the test database can be cleared and populated
 
-## Advantageous ##
-* Cross Cutting Concerns
-    * Instrumentation (External Repository) for logging and Monitoring
-    * Originating Identity (Service/user) with .NET Membership and originating user identifier required on all orchestration calls
-    * Audit: Low Adapter level TT expansion of marked entities to add audit events for add, edit, delete
-
+## Outstanding ##
+* Orchestration Central Validation
+* Code Automation TT DAL partial CRUD & Orch DTO's with partial CRUD
+* Abstracted Security Identiry Model (RBAC Roles & Claims) Users & Services (Originating user)
+* DAL TT Automated Auditing when Entity is painted with Audit
+* External Instrumentation Repo reference for logging and Monitoring
