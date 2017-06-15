@@ -26,9 +26,7 @@ namespace Spike.Adapters.Books
         public Book UpdateBook(Guid id, IBookEditable book)
         {
             var current = Context.Books.Single(b => b.Id == id);
-
-            current.Author = book.Author;
-            current.ReleaseDate = book.ReleaseDate;
+            current = current.Update(book);
 
             return current.Map<Book, BookEntity>();
         }

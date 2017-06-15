@@ -1,5 +1,4 @@
 ﻿
-
 namespace Spike.Adapters.LibraryCards
 {
     using System;
@@ -8,7 +7,6 @@ namespace Spike.Adapters.LibraryCards
     using Mappings;
     using DataSource.Entities;
     using System.Linq;
-    using Contracts.Customers;
 
     public class LibraryCardAdapter : AdapterBase, ILibraryCardAdapter
     {
@@ -29,7 +27,9 @@ namespace Spike.Adapters.LibraryCards
         public LibraryCard UpdateLibraryCard(Guid id, ILibraryCardEditable libraryCard)
         {
             var card = Context.LibraryCards.Single(l => l.Id == id);
-            card.Customer = libraryCard.Customer.Map<CustomerEntity, Customer>();
+
+            card = card.Update(libraryCard);
+            
             return card.Map<LibraryCard, LibraryCardEntity>();
         }
 

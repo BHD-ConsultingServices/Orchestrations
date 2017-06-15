@@ -30,7 +30,6 @@ namespace Spike.Adapters.Mappings
             var custommer = update?.Customer.Map<CustomerEntity, Customer>();
 
             original.Customer = custommer;
-            // original.RentedBooks = update.RentedBooks;
 
             return original;
         }

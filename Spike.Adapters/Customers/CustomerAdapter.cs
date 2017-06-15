@@ -25,8 +25,7 @@ namespace Spike.Adapters.Customers
         {
             var current = Context.Customers.Single(c => c.Id == id);
 
-            current.Adress = customer.Adress;
-            current.PhoneNumber = customer.PhoneNumber;
+            current = current.Update(customer);
 
             return current.Map();
         }
